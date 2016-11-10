@@ -123,4 +123,15 @@ class TicTacToeGameTests: XCTestCase {
         
     }
     
+    func testAddPlayerXAtPosition() {
+        var position = 0
+        var player: TicTacToeGame.Player = .X
+        game.addPlayer(player: player, atPosition: position)
+        XCTAssertEqual(game.grid[position], player)
+        player = .O
+        position = 1
+        game.addPlayer(player: player, atPosition: position)
+        XCTAssertEqual(game.grid[position], player)
+    }
+    
 }
