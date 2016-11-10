@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic-Tac Toe!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-o1-rzC">
-                                <rect key="frame" x="107" y="20" width="162" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic-Tac-Toe!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-o1-rzC">
+                                <rect key="frame" x="105.5" y="20" width="165.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -149,7 +149,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z6w-3R-oxa"/>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjK-qY-XLs"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -166,6 +166,9 @@
                                 <state key="normal" title=" New Game ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startNewGAme" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGy-av-DGk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,6 +183,18 @@
                             <constraint firstItem="twg-O1-w3k" firstAttribute="top" secondItem="1ci-o1-rzC" secondAttribute="bottom" constant="20" id="paq-Dl-fzb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cell0" destination="06K-1p-BZO" id="NJm-uS-oLs"/>
+                        <outlet property="cell1" destination="xTZ-xg-DUd" id="R6F-6Z-5V8"/>
+                        <outlet property="cell2" destination="alM-Xh-aOb" id="juM-gA-hiS"/>
+                        <outlet property="cell3" destination="LTU-Kc-l77" id="BPH-4p-3bD"/>
+                        <outlet property="cell4" destination="IgU-PL-Ieg" id="k3q-gq-hmR"/>
+                        <outlet property="cell5" destination="hF1-Vo-YKp" id="BCT-id-Iz2"/>
+                        <outlet property="cell6" destination="Nz0-G3-IMj" id="OTc-Fb-Lwo"/>
+                        <outlet property="cell7" destination="P4t-TG-7u8" id="rY4-Gc-OIm"/>
+                        <outlet property="cell8" destination="clM-IZ-OGG" id="jwD-b5-PSb"/>
+                        <outlet property="gameTitle" destination="1ci-o1-rzC" id="axP-UM-ztq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
