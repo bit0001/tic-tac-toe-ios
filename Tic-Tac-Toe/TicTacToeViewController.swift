@@ -14,14 +14,13 @@ class TicTacToeViewController: UIViewController {
     var player: TicTacToeGame.Player = .X
     
     @IBAction func markCell(_ sender: UIButton) {
-        sender.setTitle(player.rawValue, for: .normal)
-        switchPlayer()
-     }
-    
-    private func switchPlayer() {
-        player = player == .X ? .O : .X
+        if let identifier = sender.accessibilityIdentifier, let index = Int(identifier) {
+            if game.grid[index] == .E {
+                game.grid[index] = player
+                sender.setTitle(player.rawValue, for: .normal)
+                player = player == .X ? .O : .X
+            }
+        }
     }
-    
-
 }
 
