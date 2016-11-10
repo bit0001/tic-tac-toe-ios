@@ -21,14 +21,16 @@ class TicTacToeViewController: UIViewController {
     @IBOutlet weak var cell8: UIButton!
     
     var cells: [UIButton]!
+    var remainingTurns: Int!
     var game = TicTacToeGame()
     var player: TicTacToeGame.Player = .X
-    
+
     override func viewDidLoad() {
         cells = [
             cell0, cell1, cell2,
             cell3, cell4, cell5,
             cell6, cell7, cell8]
+        remainingTurns = cells.count
     }
     
     @IBAction func markCell(_ sender: UIButton) {
@@ -37,6 +39,7 @@ class TicTacToeViewController: UIViewController {
                 game.grid[index] = player
                 sender.setTitle(player.rawValue, for: .normal)
                 player = player == .X ? .O : .X
+                remainingTurns = remainingTurns - 1
                 updateUI()
             }
         }
@@ -46,6 +49,7 @@ class TicTacToeViewController: UIViewController {
         game = TicTacToeGame()
         gameTitle.text = "Tic-Tac-Toe!"
         player = .X
+        remainingTurns = cells.count
         for cell in cells {
             cell.setTitle(" ", for: .normal)
         }
@@ -55,6 +59,8 @@ class TicTacToeViewController: UIViewController {
     private func updateUI() {
         if let winner = game.getWinner() {
             gameTitle.text = "Player \(winner.rawValue) is the winner"
+        } else if remainingTurns == 0 {
+            gameTitle.text = "There is a draw"
         }
     }
 }
