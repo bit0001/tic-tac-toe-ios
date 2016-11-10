@@ -8,13 +8,13 @@
 
 import XCTest
 
-class Tic_Tac_ToeUITests: XCTestCase {
-    
+class TicTacToeTwoPlayersUITests: XCTestCase {
     let app = XCUIApplication()
 
     override func setUp() {
         super.setUp()
         app.launch()
+        app.buttons["Two Players"].tap()
     }
     
     override func tearDown() {
