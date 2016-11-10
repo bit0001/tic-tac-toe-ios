@@ -8,8 +8,10 @@
 
 import XCTest
 
-@testable import 
-class Tic_Tac_ToeTests: XCTestCase {
+@testable import Tic_Tac_Toe
+class TicTacToeGameTests: XCTestCase {
+    
+    let game = TicTacToeGame()
     
     override func setUp() {
         super.setUp()
@@ -21,8 +23,125 @@ class Tic_Tac_ToeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testCheckWinner3InaRowPattern() {
-        let game = TicTacToeGame()
+    func testCheckWinner3InaRowXPattern() {
+        let player = "X"
+        game.grid = [
+            player, player, player,
+            " ", " ", " ",
+            " ", " ", " "
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", " ",
+            player, player, player,
+            " ", " ", " "
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", " ",
+            " ", " ", " ",
+            player, player, player,
+        ]
+        XCTAssertTrue(game.isWinner())
+    }
+    
+    func testCheckWinner3InaRowOPattern() {
+        let player = "O"
+        game.grid = [
+            player, player, player,
+            " ", " ", " ",
+            " ", " ", " "
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", " ",
+            player, player, player,
+            " ", " ", " "
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", " ",
+            " ", " ", " ",
+            player, player, player,
+        ]
+        XCTAssertTrue(game.isWinner())
+    }
+    
+    func testCheckWinner3InaColumnXPattern() {
+        let player = "O"
+        game.grid = [
+            player, "", "",
+            player, "", "",
+            player, "", "",
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", player, " ",
+            " ", player, " ",
+            " ", player, " ",
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", player,
+            " ", " ", player,
+            " ", " ", player,
+        ]
+        XCTAssertTrue(game.isWinner())
+    }
+    
+    func testCheckWinner3InaColumnOPattern() {
+        let player = "X"
+        game.grid = [
+            player, "", "",
+            player, "", "",
+            player, "", "",
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", player, " ",
+            " ", player, " ",
+            " ", player, " ",
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", player,
+            " ", " ", player,
+            " ", " ", player,
+        ]
+        XCTAssertTrue(game.isWinner())
+    }
+    
+    func testCheckWinnerXDiagonalPatter() {
+        let player = "X"
+        game.grid = [
+            player, "", "",
+            "", player, "",
+            "", "", player,
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", player,
+            " ", player, " ",
+            player, " ", " ",
+        ]
+        XCTAssertTrue(game.isWinner())
+        
+    }
+    
+    func testCheckWinnerODiagonalPatter() {
+        let player = "O"
+        game.grid = [
+            player, "", "",
+            "", player, "",
+            "", "", player,
+        ]
+        XCTAssertTrue(game.isWinner())
+        game.grid = [
+            " ", " ", player,
+            " ", player, " ",
+            player, " ", " ",
+        ]
+        XCTAssertTrue(game.isWinner())
         
     }
     
