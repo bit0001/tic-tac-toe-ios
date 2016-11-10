@@ -24,123 +24,101 @@ class TicTacToeGameTests: XCTestCase {
     }
     
     func testCheckWinner3InaRowXPattern() {
-        let player = "X"
         game.grid = [
-            player, player, player,
-            " ", " ", " ",
-            " ", " ", " "
-        ]
+            .X, .X, .X,
+            .E, .E, .E,
+            .E, .E, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", " ",
-            player, player, player,
-            " ", " ", " "
-        ]
+            .E, .E, .E,
+            .X, .X, .X,
+            .E, .E, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", " ",
-            " ", " ", " ",
-            player, player, player,
-        ]
+            .E, .E, .E,
+            .E, .E, .E,
+            .X, .X, .X]
         XCTAssertTrue(game.isWinner())
     }
     
     func testCheckWinner3InaRowOPattern() {
-        let player = "O"
         game.grid = [
-            player, player, player,
-            " ", " ", " ",
-            " ", " ", " "
-        ]
+            .O, .O, .O,
+            .E, .E, .E,
+            .E, .E, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", " ",
-            player, player, player,
-            " ", " ", " "
-        ]
+            .E, .E, .E,
+            .O, .O, .O,
+            .E, .E, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", " ",
-            " ", " ", " ",
-            player, player, player,
-        ]
+            .E, .E, .E,
+            .E, .E, .E,
+            .O, .O, .O]
         XCTAssertTrue(game.isWinner())
     }
-    
+
     func testCheckWinner3InaColumnXPattern() {
-        let player = "O"
         game.grid = [
-            player, "", "",
-            player, "", "",
-            player, "", "",
-        ]
+            .X, .E, .E,
+            .X, .E, .E,
+            .X, .E, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", player, " ",
-            " ", player, " ",
-            " ", player, " ",
-        ]
+            .E, .X, .E,
+            .E, .X, .E,
+            .E, .X, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", player,
-            " ", " ", player,
-            " ", " ", player,
-        ]
+            .E, .E, .X,
+            .E, .E, .X,
+            .E, .E, .X]
         XCTAssertTrue(game.isWinner())
     }
     
     func testCheckWinner3InaColumnOPattern() {
-        let player = "X"
         game.grid = [
-            player, "", "",
-            player, "", "",
-            player, "", "",
-        ]
+            .O, .E, .E,
+            .O, .E, .E,
+            .O, .E, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", player, " ",
-            " ", player, " ",
-            " ", player, " ",
-        ]
+            .E, .O, .E,
+            .E, .O, .E,
+            .E, .O, .E]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", player,
-            " ", " ", player,
-            " ", " ", player,
-        ]
+            .E, .E, .O,
+            .E, .E, .O,
+            .E, .E, .O]
         XCTAssertTrue(game.isWinner())
     }
     
     func testCheckWinnerXDiagonalPatter() {
-        let player = "X"
         game.grid = [
-            player, "", "",
-            "", player, "",
-            "", "", player,
-        ]
+            .X, .E, .E,
+            .E, .X, .E,
+            .E, .E, .X]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", player,
-            " ", player, " ",
-            player, " ", " ",
-        ]
+            .E, .E, .X,
+            .E, .X, .E,
+            .X, .E, .E]
         XCTAssertTrue(game.isWinner())
         
     }
     
     func testCheckWinnerODiagonalPatter() {
-        let player = "O"
         game.grid = [
-            player, "", "",
-            "", player, "",
-            "", "", player,
-        ]
+            .O, .E, .E,
+            .E, .O, .E,
+            .E, .E, .O]
         XCTAssertTrue(game.isWinner())
         game.grid = [
-            " ", " ", player,
-            " ", player, " ",
-            player, " ", " ",
-        ]
+            .E, .E, .O,
+            .E, .O, .E,
+            .O, .E, .E]
         XCTAssertTrue(game.isWinner())
         
     }

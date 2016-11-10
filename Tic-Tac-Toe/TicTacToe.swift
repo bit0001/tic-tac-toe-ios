@@ -9,13 +9,15 @@
 import Foundation
 
 class TicTacToeGame {
-    var grid = [" ", " ", " ",
-                " ", " ", " ",
-                " ", " ", " "]
     
     enum Player: String {
         case X, O, E
     }
+    
+    var grid: [Player] = [
+        .E, .E, .E,
+        .E, .E, .E,
+        .E, .E, .E]
     
     func isWinner() -> Bool {
         return isWinner(player: .X) || isWinner(player: .O)
@@ -36,7 +38,7 @@ class TicTacToeGame {
     
     private func isWinningRow(row: Int, player: Player) -> Bool {
         for j in 0..<3 {
-            if grid[3 * row + j] == player.rawValue {
+            if grid[3 * row + j] == player {
                 continue
             }
             return false
@@ -55,7 +57,7 @@ class TicTacToeGame {
     
     private func isWinningColumn(column: Int, player: Player) -> Bool {
         for i in 0..<3 {
-            if grid[3 * i + column] == player.rawValue {
+            if grid[3 * i + column] == player {
                 continue
             }
             return false
@@ -69,7 +71,7 @@ class TicTacToeGame {
     
     private func isWinningPositiveDiagonal(player: Player) -> Bool {
         for i in 0..<3 {
-            if grid[3 * i + i] != player.rawValue {
+            if grid[3 * i + i] != player {
                 return false
             }
         }
@@ -78,7 +80,7 @@ class TicTacToeGame {
     
     private func isWinningNegativeDiagonal(player: Player) -> Bool {
         for i in 0..<3 {
-            if grid[2 * i + 2] != player.rawValue {
+            if grid[2 * i + 2] != player {
                 return false
             }
         }
