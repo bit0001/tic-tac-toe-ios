@@ -11,7 +11,7 @@ import XCTest
 class Tic_Tac_ToeUITests: XCTestCase {
     
     let app = XCUIApplication()
-        
+
     override func setUp() {
         super.setUp()
         app.launch()
@@ -19,6 +19,13 @@ class Tic_Tac_ToeUITests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+    }
+
+    func testPlayerMovements() {
+        app.buttons["0"].tap()
+        app.buttons["1"].tap()
+        XCTAssertEqual("X", app.buttons["0"].label)
+        XCTAssertEqual("O", app.buttons["1"].label)
     }
 
     func testPlayerXWins() {
