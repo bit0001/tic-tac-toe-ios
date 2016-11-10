@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE6625A31DD1A33B000E609B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6625A21DD1A33B000E609B /* AppDelegate.swift */; };
-		CE6625A51DD1A33B000E609B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6625A41DD1A33B000E609B /* ViewController.swift */; };
+		CE6625A51DD1A33B000E609B /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6625A41DD1A33B000E609B /* TicTacToeViewController.swift */; };
 		CE6625A81DD1A33B000E609B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6625A61DD1A33B000E609B /* Main.storyboard */; };
 		CE6625AA1DD1A33B000E609B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6625A91DD1A33B000E609B /* Assets.xcassets */; };
 		CE6625AD1DD1A33B000E609B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6625AB1DD1A33B000E609B /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		CE66259F1DD1A33B000E609B /* Tic-Tac-Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6625A21DD1A33B000E609B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE6625A41DD1A33B000E609B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE6625A41DD1A33B000E609B /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 		CE6625A71DD1A33B000E609B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6625A91DD1A33B000E609B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6625AC1DD1A33B000E609B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6625B41DD1A3C7000E609B /* Supporting Files */,
-				CE6625A41DD1A33B000E609B /* ViewController.swift */,
+				CE6625A41DD1A33B000E609B /* TicTacToeViewController.swift */,
 				CE6625A61DD1A33B000E609B /* Main.storyboard */,
 			);
 			path = "Tic-Tac-Toe";
@@ -267,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6625A51DD1A33B000E609B /* ViewController.swift in Sources */,
+				CE6625A51DD1A33B000E609B /* TicTacToeViewController.swift in Sources */,
 				CE6625A31DD1A33B000E609B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +511,7 @@
 				CE6625B31DD1A33B000E609B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE6625C01DD1A423000E609B /* Build configuration list for PBXNativeTarget "Tic-Tac-ToeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +520,7 @@
 				CE6625C21DD1A423000E609B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE6625CE1DD1A436000E609B /* Build configuration list for PBXNativeTarget "Tic-Tac-ToeTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +529,7 @@
 				CE6625D01DD1A436000E609B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

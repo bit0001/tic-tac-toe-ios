@@ -8,6 +8,7 @@
 
 import XCTest
 
+@testable import 
 class Tic_Tac_ToeTests: XCTestCase {
     
     override func setUp() {
@@ -20,16 +21,9 @@ class Tic_Tac_ToeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testCheckWinner3InaRowPattern() {
+        let game = TicTacToeGame()
+        
     }
     
 }
