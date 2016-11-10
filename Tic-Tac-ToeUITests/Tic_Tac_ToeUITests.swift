@@ -53,4 +53,17 @@ class Tic_Tac_ToeUITests: XCTestCase {
         XCTAssertEqual("There is a draw", XCUIApplication().staticTexts["game_title"].label)
     }
     
+    func testNewGame() {
+        let app = XCUIApplication()
+        app.buttons["0"].tap()
+        app.buttons["1"].tap()
+        app.buttons["4"].tap()
+        app.buttons[" New Game "].tap()
+        XCTAssertEqual("Tic-Tac-Toe!", XCUIApplication().staticTexts["game_title"].label)
+
+        for i in 0..<9 {
+            XCTAssertEqual(" ", app.buttons["\(i)"].label)
+        }
+    }
+    
 }
