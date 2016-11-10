@@ -14,7 +14,7 @@
 		CE6625AA1DD1A33B000E609B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6625A91DD1A33B000E609B /* Assets.xcassets */; };
 		CE6625AD1DD1A33B000E609B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6625AB1DD1A33B000E609B /* LaunchScreen.storyboard */; };
 		CE6625BC1DD1A423000E609B /* Tic_Tac_ToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6625BB1DD1A423000E609B /* Tic_Tac_ToeUITests.swift */; };
-		CE6625CA1DD1A436000E609B /* Tic_Tac_ToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6625C91DD1A436000E609B /* Tic_Tac_ToeTests.swift */; };
+		CE6625CA1DD1A436000E609B /* TicTacToeGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6625C91DD1A436000E609B /* TicTacToeGameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		CE6625BB1DD1A423000E609B /* Tic_Tac_ToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_ToeUITests.swift; sourceTree = "<group>"; };
 		CE6625BD1DD1A423000E609B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6625C71DD1A436000E609B /* Tic-Tac-ToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic-Tac-ToeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE6625C91DD1A436000E609B /* Tic_Tac_ToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_ToeTests.swift; sourceTree = "<group>"; };
+		CE6625C91DD1A436000E609B /* TicTacToeGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGameTests.swift; sourceTree = "<group>"; };
 		CE6625CB1DD1A436000E609B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +130,7 @@
 		CE6625C81DD1A436000E609B /* Tic-Tac-ToeTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE6625C91DD1A436000E609B /* Tic_Tac_ToeTests.swift */,
+				CE6625C91DD1A436000E609B /* TicTacToeGameTests.swift */,
 				CE6625CB1DD1A436000E609B /* Info.plist */,
 			);
 			path = "Tic-Tac-ToeTests";
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6625CA1DD1A436000E609B /* Tic_Tac_ToeTests.swift in Sources */,
+				CE6625CA1DD1A436000E609B /* TicTacToeGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
