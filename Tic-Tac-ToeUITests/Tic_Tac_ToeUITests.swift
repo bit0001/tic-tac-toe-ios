@@ -30,6 +30,14 @@ class Tic_Tac_ToeUITests: XCTestCase {
         XCTAssertEqual("Player X is the winner", XCUIApplication().staticTexts["game_title"].label)
     }
     
+    func testPlayerOWins() {
+        app.buttons["3"].tap()
+        app.buttons["0"].tap()
+        app.buttons["4"].tap()
+        app.buttons["1"].tap()
+        app.buttons["7"].tap()
+        app.buttons["2"].tap()
+        XCTAssertEqual("Player O is the winner", XCUIApplication().staticTexts["game_title"].label)
     }
     
 }
