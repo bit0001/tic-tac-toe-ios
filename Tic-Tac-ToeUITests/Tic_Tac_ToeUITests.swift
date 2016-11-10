@@ -27,6 +27,12 @@ class Tic_Tac_ToeUITests: XCTestCase {
         XCTAssertEqual("X", app.buttons["0"].label)
         XCTAssertEqual("O", app.buttons["1"].label)
     }
+    
+    func testPlayerCannotUndoPreviousPlayerMovement() {
+        app.buttons["0"].tap()
+        app.buttons["0"].tap()
+        XCTAssertEqual("X", app.buttons["0"].label)
+    }
 
     func testPlayerXWins() {
         app.buttons["0"].tap()
