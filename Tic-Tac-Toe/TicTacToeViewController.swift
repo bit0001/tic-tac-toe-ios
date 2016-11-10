@@ -25,6 +25,7 @@ class TicTacToeViewController: UIViewController {
             }
         }
     }
+
     var game = TicTacToeGame()
     var player: TicTacToeGame.Player = .X
 

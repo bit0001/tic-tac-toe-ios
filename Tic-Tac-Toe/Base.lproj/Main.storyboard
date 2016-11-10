@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b8N-h1-7af">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tic-Tac-Toe!-->
+        <scene sceneID="jaB-ew-bCS">
+            <objects>
+                <viewController id="NSg-Lr-k4Z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bwt-v5-nsb"/>
+                        <viewControllerLayoutGuide type="bottom" id="dV2-zD-sB8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AGI-Hx-Fnv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R7x-v1-uTf">
+                                <rect key="frame" x="74" y="263" width="227" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPa-UP-f0D">
+                                        <rect key="frame" x="0.0" y="0.0" width="227" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Single Player"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="Single Player" id="Fdb-ec-qGX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-LD-qVj">
+                                        <rect key="frame" x="0.0" y="80" width="227" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Two Players"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="Two Players" id="mjx-xW-QAm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R7x-v1-uTf" firstAttribute="centerX" secondItem="AGI-Hx-Fnv" secondAttribute="centerX" id="M5m-5B-tYe"/>
+                            <constraint firstItem="R7x-v1-uTf" firstAttribute="centerY" secondItem="AGI-Hx-Fnv" secondAttribute="centerY" id="kcg-h6-T3L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tic-Tac-Toe!" id="ycc-LH-ThG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmE-CJ-qn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="21.139430284857571"/>
+        </scene>
         <!--Tic Tac Toe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -199,7 +245,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="864.79999999999995" y="21.139430284857571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kOx-L2-dOf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b8N-h1-7af" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gua-3v-l4t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NSg-Lr-k4Z" kind="relationship" relationship="rootViewController" id="aLJ-vp-5Qt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuz-wy-az8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="21"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mjx-xW-QAm"/>
+    </inferredMetricsTieBreakers>
 </document>
