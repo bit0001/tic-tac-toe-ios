@@ -42,6 +42,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j3o-Ws-zQs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTZ-xg-DUd">
                                                 <rect key="frame" x="117.5" y="0.0" width="108" height="165"/>
@@ -51,6 +54,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HF6-kM-bLH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alM-Xh-aOb">
                                                 <rect key="frame" x="235.5" y="0.0" width="107.5" height="165"/>
@@ -60,6 +66,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AaS-uR-qYV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -74,6 +83,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHy-AB-bGR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgU-PL-Ieg">
                                                 <rect key="frame" x="117.5" y="0.0" width="108" height="165"/>
@@ -83,6 +95,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SoO-9H-Xl4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF1-Vo-YKp">
                                                 <rect key="frame" x="235.5" y="0.0" width="107.5" height="165"/>
@@ -92,6 +107,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfu-tQ-hwq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -106,6 +124,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChA-LP-Cgs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4t-TG-7u8">
                                                 <rect key="frame" x="117.5" y="0.0" width="108" height="165"/>
@@ -115,6 +136,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UC9-yf-goa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clM-IZ-OGG">
                                                 <rect key="frame" x="235.5" y="0.0" width="107.5" height="165"/>
@@ -124,6 +148,9 @@
                                                 <state key="normal" title=" ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="markCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z6w-3R-oxa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
