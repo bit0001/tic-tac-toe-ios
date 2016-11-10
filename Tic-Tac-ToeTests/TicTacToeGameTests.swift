@@ -28,17 +28,17 @@ class TicTacToeGameTests: XCTestCase {
             .X, .X, .X,
             .E, .E, .E,
             .E, .E, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
         game.grid = [
             .E, .E, .E,
             .X, .X, .X,
             .E, .E, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
         game.grid = [
             .E, .E, .E,
             .E, .E, .E,
             .X, .X, .X]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
     }
     
     func testCheckWinner3InaRowOPattern() {
@@ -46,17 +46,17 @@ class TicTacToeGameTests: XCTestCase {
             .O, .O, .O,
             .E, .E, .E,
             .E, .E, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
         game.grid = [
             .E, .E, .E,
             .O, .O, .O,
             .E, .E, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
         game.grid = [
             .E, .E, .E,
             .E, .E, .E,
             .O, .O, .O]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
     }
 
     func testCheckWinner3InaColumnXPattern() {
@@ -64,17 +64,17 @@ class TicTacToeGameTests: XCTestCase {
             .X, .E, .E,
             .X, .E, .E,
             .X, .E, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
         game.grid = [
             .E, .X, .E,
             .E, .X, .E,
             .E, .X, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
         game.grid = [
             .E, .E, .X,
             .E, .E, .X,
             .E, .E, .X]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
     }
     
     func testCheckWinner3InaColumnOPattern() {
@@ -82,17 +82,17 @@ class TicTacToeGameTests: XCTestCase {
             .O, .E, .E,
             .O, .E, .E,
             .O, .E, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
         game.grid = [
             .E, .O, .E,
             .E, .O, .E,
             .E, .O, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
         game.grid = [
             .E, .E, .O,
             .E, .E, .O,
             .E, .E, .O]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
     }
     
     func testCheckWinnerXDiagonalPatter() {
@@ -100,12 +100,12 @@ class TicTacToeGameTests: XCTestCase {
             .X, .E, .E,
             .E, .X, .E,
             .E, .E, .X]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
         game.grid = [
             .E, .E, .X,
             .E, .X, .E,
             .X, .E, .E]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.X, game.getWinner()!)
         
     }
     
@@ -114,24 +114,12 @@ class TicTacToeGameTests: XCTestCase {
             .O, .E, .E,
             .E, .O, .E,
             .E, .E, .O]
-        XCTAssertTrue(game.isWinner())
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
         game.grid = [
             .E, .E, .O,
             .E, .O, .E,
             .O, .E, .E]
-        XCTAssertTrue(game.isWinner())
-        
-    }
-    
-    func testAddPlayerXAtPosition() {
-        var position = 0
-        var player: TicTacToeGame.Player = .X
-        game.addPlayer(player: player, atPosition: position)
-        XCTAssertEqual(game.grid[position], player)
-        player = .O
-        position = 1
-        game.addPlayer(player: player, atPosition: position)
-        XCTAssertEqual(game.grid[position], player)
+        XCTAssertEqual(TicTacToeGame.Player.O, game.getWinner()!)
     }
     
 }

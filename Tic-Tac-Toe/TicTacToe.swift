@@ -19,12 +19,14 @@ class TicTacToeGame {
         .E, .E, .E,
         .E, .E, .E]
     
-    func addPlayer(player: Player, atPosition position: Int) {
-        grid[position] = player
-    }
-    
-    func isWinner() -> Bool {
-        return isWinner(player: .X) || isWinner(player: .O)
+    func getWinner() -> Player? {
+        if isWinner(player: .X) {
+            return .X
+        } else if isWinner(player: .O) {
+            return .O
+        } else {
+            return nil
+        }
     }
     
     private func isWinner(player: Player) -> Bool {
