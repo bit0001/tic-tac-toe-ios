@@ -39,16 +39,18 @@ class TicTacToeViewController: UIViewController {
     }
     
     @IBAction func markCell(_ sender: UIButton) {
-        if let identifier = sender.accessibilityIdentifier, let index = Int(identifier) {
-            if game.grid[index] == .E {
-                game.grid[index] = player
-                sender.setTitle(player.rawValue, for: .normal)
-                player = player == .X ? .O : .X
-                remainingTurns = remainingTurns - 1
-                if isSinglePlayer {
-                    play()
+        if game.getWinner() == nil {
+            if let identifier = sender.accessibilityIdentifier, let index = Int(identifier) {
+                if game.grid[index] == .E {
+                    game.grid[index] = player
+                    sender.setTitle(player.rawValue, for: .normal)
+                    player = player == .X ? .O : .X
+                    remainingTurns = remainingTurns - 1
+                    if isSinglePlayer {
+                        play()
+                    }
+                    updateUI()
                 }
-                updateUI()
             }
         }
     }
