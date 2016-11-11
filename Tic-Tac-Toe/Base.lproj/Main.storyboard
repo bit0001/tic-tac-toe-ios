@@ -13,7 +13,7 @@
         <!--Tic-Tac-Toe!-->
         <scene sceneID="jaB-ew-bCS">
             <objects>
-                <viewController id="NSg-Lr-k4Z" sceneMemberID="viewController">
+                <viewController id="NSg-Lr-k4Z" customClass="ModeViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bwt-v5-nsb"/>
                         <viewControllerLayoutGuide type="bottom" id="dV2-zD-sB8"/>
@@ -267,6 +267,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mjx-xW-QAm"/>
+        <segue reference="Fdb-ec-qGX"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,11 +8,11 @@
 
 import Foundation
 
+enum Player: String {
+    case X, O, E
+}
+
 class TicTacToeGame {
-    
-    enum Player: String {
-        case X, O, E
-    }
     
     var grid: [Player] = [
         .E, .E, .E,

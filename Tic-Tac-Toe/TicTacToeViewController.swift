@@ -11,7 +11,7 @@ class TicTacToeViewController: UIViewController {
     @IBOutlet weak var cell6: UIButton!
     @IBOutlet weak var cell7: UIButton!
     @IBOutlet weak var cell8: UIButton!
-    
+
     var cells: [UIButton]!
     var remainingTurns: Int! {
         didSet {
@@ -27,7 +27,8 @@ class TicTacToeViewController: UIViewController {
     }
 
     var game = TicTacToeGame()
-    var player: TicTacToeGame.Player = .X
+    var player: Player = .X
+    var isSinglePlayer = false
 
     override func viewDidLoad() {
         cells = [
@@ -44,6 +45,9 @@ class TicTacToeViewController: UIViewController {
                 sender.setTitle(player.rawValue, for: .normal)
                 player = player == .X ? .O : .X
                 remainingTurns = remainingTurns - 1
+                if isSinglePlayer {
+                    play()
+                }
                 updateUI()
             }
         }
@@ -61,6 +65,22 @@ class TicTacToeViewController: UIViewController {
     private func updateUI() {
         if let winner = game.getWinner() {
             gameTitle.text = "Player \(winner.rawValue) is the winner"
+        }
+    }
+    
+    private func play() {
+        var available = [Int]()
+        for i in 0..<game.grid.count {
+            if game.grid[i] == .E {
+                available.append(i)
+            }
+        }
+        
+        if available.count > 0 {
+            let index = available[Int(arc4random_uniform(UInt32(available.count)))]
+            game.grid[index] = player
+            cells[index].setTitle(player.rawValue, for: .normal)
+            player = .X
         }
     }
 }
