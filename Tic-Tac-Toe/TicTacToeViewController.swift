@@ -83,6 +83,7 @@ class TicTacToeViewController: UIViewController {
             game.grid[index] = player
             cells[index].setTitle(player.rawValue, for: .normal)
             player = .X
+            remainingTurns = remainingTurns - 1
         }
     }
 }
